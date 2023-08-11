@@ -9,9 +9,11 @@
 </head>
 <body>
     <script>
-        if (/iPhone|iPad|Android/i.test(navigator.userAgent)) {
-        console.log("Warning: This site is optimized for desktop viewing. Please access from a desktop computer.");
-    }
+        if (screen.width >= 1024) {
+        document.getElementById('myButton').style.visibility = 'visible';
+        } else {
+        document.getElementById('myButton').style.visibility = 'hidden';
+        }
     </script>
     <div class="wrapper">
         <div class="container">
