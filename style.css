@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Be Vietnam Pro";
+    box-sizing: border-box;
+}
+body{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.8029412448573179) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 95%, rgba(0,0,0,0.8001401244091386) 100%); 
+}
+.wrapper{
+    background-color: rgb(0, 0, 0);
+    margin: 0 auto;
+    height: 100vh;
+    padding: 5px 40px;
+    max-width: 1400px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+.bookmark{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.drtlink{
+    text-decoration: none !important;
+    color: rgb(221, 221, 221);
+}
+
+.drtlink:hover{
+    transform: scale(1.08);
+    transition: 0.3s;
+}
+.intro{
+     display: flex;
+    justify-content: space-between; 
+    
+    margin-left: 45px;
+    margin-top: 13rem;
+    /* box-shadow: 0.25px 0.25px 6.25px 2.5px rgba(255, 255, 255, 0.74) */
+}
+.text-container{
+    color: white;
+    /* margin-top: 13rem; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+}
+.greetings{
+    font-size: 2rem;
+}
+.javascript{
+    font-size: 1.8rem;
+    margin-top: 1.2rem;
+}
+
+/* ***************Image container animation****************** */
+.image-container-section{
+    border-radius: 10px;
+    width: fit-content;
+    /* margin-top: 13rem; */
+    /* right: 10%; */
+    position: relative;
+
+
+}
+.saul-img{
+    padding: 3.5rem;
+    animation-name: saul;
+    animation-duration: 7.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes saul{
+    0%{
+        transform: scale(0.9);
+        filter: grayscale(60%);
+    }
+    50%{
+        transform: scale(1);
+        filter: grayscale(0%);
+        box-shadow: 0.25px 0.25px 6.25px 2.5px rgba(255, 255, 255, 0.74)
+    }
+    100%{
+        transform: scale(0.9);
+        filter: grayscale(60%);
+    }
+}
+.balance{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: 8;
+    animation-name: balanceani;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: forwards; */
+}
+@keyframes balanceani{
+    0%{
+        transform: translateX(0%) scale(0.8);
+        filter: opacity(0.4);
+        /* transform: translateY(0%); */
+        /* transform: scale(0.95); */
+    }
+    50%{
+        transform: translateX(-25%) translateY(-25%) scale(1);
+        filter: opacity(1);
+        /* transform: translateY(-100%); */
+        /* transform: scale(1); */
+    }
+    100%{
+        transform: translateX(0%) scale(0.8);
+        filter: opacity(0.4);
+        /* transform: translateY(0%); */
+        /* transform: scale(0.95); */
+    }
+}
+.wrldgr8estlawyer{
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    z-index: 8;
+    animation-name: bubble-animation;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes bubble-animation{
+    0%{
+        /* transform: translateX(0%) scale(0.8); */
+        transform: translateX(-25%) translateY(-30%) scale(1);
+        filter: blur(6px);
+        /* transform: translateY(0%); */
+        /* transform: scale(0.95); */
+    }
+    50%{
+        /* transform: translateX(-25%) translateY(-25%) scale(1); */
+        transform: translateX(0%) scale(0.8);
+        filter: blur(0);
+        /* transform: translateY(-100%); */
+        /* transform: scale(1); */
+    }
+    100%{
+        /* transform: translateX(0%) scale(0.8); */
+        transform: translateX(-25%) translateY(-30%) scale(1);
+        filter: blur(6px);
+        /* transform: translateY(0%); */
+        /* transform: scale(0.95); */
+    }
+}
+.cube-image{
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    animation-name: cube-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes cube-animation{
+    50%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.letter-JMM{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    animation-name: jmm-desc;
+    animation-timing-function: ease-in-out;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes jmm-desc{
+    0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+
+/*Button' formatting*/
+.btn-pink{
+    border: 1px solid rgb(255, 0, 0);
+    position: relative;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 180px;
+    transition-timing-function: ease-in-out;
+}
+.HireMe{
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.btn-pink:hover {
+    box-shadow: 1px 1px 25px 10px rgba(255, 1, 1, 0.4);
+    transform: scale(1.04);
+    transition: 1s;
+  }
+  
+  .btn-pink:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 251, 0, 0.4),
+      transparent
+    );
+    transition: all 1s;
+  }
+.btn-pink:hover{
+    color: yellow;
+    transition: color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+.btn-pink:hover:before {
+    left: 100%;
+}
+  
