@@ -4,22 +4,37 @@
     padding: 0;
     font-family: "Be Vietnam Pro";
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.8029412448573179) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 95%, rgba(0,0,0,0.8001401244091386) 100%); 
 }
 .wrapper{
-    background-color: rgb(0, 0, 0);
-    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 1400px;
     height: 100vh;
     padding: 5px 40px;
-    max-width: 1400px;
+    padding-bottom: 0;
+    margin: 0 auto;
 }
 .navbar{
+    position: fixed !important;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     color: white;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.568);
+    /* margin:0 316px; */
+    padding: 0 316px;
     align-items: center;
 }
 .bookmark{
@@ -41,13 +56,14 @@ body{
     justify-content: space-between; 
     
     margin-left: 45px;
-    margin-top: 13rem;
+    margin-top: 14rem;
     /* box-shadow: 0.25px 0.25px 6.25px 2.5px rgba(255, 255, 255, 0.74) */
 }
 .text-container{
     color: white;
     /* margin-top: 13rem; */
-    width: 50%;
+    width: 52%;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -58,14 +74,47 @@ body{
 }
 .javascript{
     font-size: 1.8rem;
-    margin-top: 1.2rem;
+    /* margin-top: 1.2rem; */
+    color: rgb(0, 255, 255);
+    text-shadow: rgb(0, 255, 255) 0 0 15px;
 }
+.big-size-name{
+    color: rgb(75, 75, 75);
+    position: absolute;
+    bottom: -2.3%;
+    left: 10%;
+    font-weight: 800;
+    font-size: 5rem;
 
-/* ***************Image container animation****************** */
+    animation-name: big-size-name-animation;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+@keyframes big-size-name-animation{
+    0%{
+        filter: blur(20px);
+    }
+    100%{
+        filter: blur(0);
+    }
+}
+.side-text{
+    color: rgb(75, 75, 75);
+    position:absolute;
+    bottom: -0.6%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    right: 1%;
+}
+/* *************************Image container animation*************************** */
+
+
 .image-container-section{
     border-radius: 10px;
     width: fit-content;
     /* margin-top: 13rem; */
+
     /* right: 10%; */
     position: relative;
 
@@ -99,7 +148,6 @@ body{
     position: absolute;
     bottom: 0%;
     right: 0%;
-    z-index: 8;
     animation-name: balanceani;
     animation-duration: 7.5s;
     animation-iteration-count: infinite;
@@ -130,7 +178,6 @@ body{
     position: absolute;
     top: -10%;
     left: 10%;
-    z-index: 8;
     animation-name: bubble-animation;
     animation-duration: 7.5s;
     animation-iteration-count: infinite;
@@ -141,21 +188,21 @@ body{
     0%{
         /* transform: translateX(0%) scale(0.8); */
         transform: translateX(-25%) translateY(-30%) scale(1);
-        filter: blur(6px);
+        filter: opacity(0);
         /* transform: translateY(0%); */
         /* transform: scale(0.95); */
     }
     50%{
         /* transform: translateX(-25%) translateY(-25%) scale(1); */
         transform: translateX(0%) scale(0.8);
-        filter: blur(0);
+        filter: opacity(1);
         /* transform: translateY(-100%); */
         /* transform: scale(1); */
     }
     100%{
         /* transform: translateX(0%) scale(0.8); */
         transform: translateX(-25%) translateY(-30%) scale(1);
-        filter: blur(6px);
+        filter: opacity(0);
         /* transform: translateY(0%); */
         /* transform: scale(0.95); */
     }
@@ -200,7 +247,17 @@ body{
     }
 }
 
-/*Button' formatting*/
+
+/* *****************Button formatting******************* */
+
+
+.HireMe{
+    text-decoration: none;
+    font-size: 1.5rem;
+    width: 30%;/*parent of the div with id btn-pink*/
+    color: #ffffff;
+    text-transform: uppercase;
+}
 .btn-pink{
     border: 1px solid rgb(255, 0, 0);
     position: relative;
@@ -208,15 +265,8 @@ body{
     display: flex;
     justify-content: center;
     overflow: hidden;
-    width: 180px;
+    width: 100%;
     transition-timing-function: ease-in-out;
-}
-.HireMe{
-    text-decoration: none;
-    font-size: 1.5rem;
-    
-    color: #ffffff;
-    text-transform: uppercase;
 }
 .btn-pink:hover {
     box-shadow: 1px 1px 25px 10px rgba(255, 1, 1, 0.4);
@@ -248,4 +298,349 @@ body{
 .btn-pink:hover:before {
     left: 100%;
 }
+
+
+/* **********************Cases-container formatting*********************** */
+
+
+.cases-container{
+    /* background: rgb(121,121,121);
+    background: linear-gradient(0deg, rgba(121,121,121,1) 0%, rgba(121,121,121,1) 70%, rgba(0,0,0,1) 100%);  */
+    background-color: rgb(75, 75, 75);
+    /* padding-bottom: 5rem; */
+    /* margin-top: 198px; */
+    position: relative;
+}
+.cases-heading{
+    padding-top: 30px;
+    /* position: absolute; */
+    padding-bottom: 30px;
+    color: yellow;
+    text-align: center;
+    left: 50%;
+    top: 0%;
+    font-size: 5rem;
+}
+.only-cases-container{
+    max-width: 1400px;
+    /* height: 100%; */
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    margin-bottom: 150px;
+    background-color: rgb(75, 75, 75);
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    /* position: relative; */
+    gap: 220px;
+}
+ .AllCases{
+    /* position: absolute; */
+    box-shadow: 2px 2px 50px 10px rgba(0, 0, 0, 0.685);
+    background-size: cover;
+    width: 80rem;
+    height: 45.153125rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display: flex;
+    align-items: center;
+    justify-content:start;
+    padding-left: 56px; */
+}
+.AllCases::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1f1f1fb6;
+    z-index: 0;
+}
+/* .AllCases::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #acacac, #acacacb2, #a#sandpiper-case
+    transform: scaleX(0);
+    transform-origin: bottom;
+    transition: all 0.8s;
+    z-index:1;
+}
+.AllCases:hover::before{
+    transform:scaleX(1);
+} */
+#teens-in-trouble{
+
+    background-image: url(img/case/teens-in-trouble.png);
+}
+#teens-in-trouble::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #acacac, #acacacb2, #acacac67);
+    /* background: rgba(184, 184, 74, 0.527); */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+    z-index:1;
+}
+#teens-in-trouble:hover::before{
+    transform:scaleX(1);
+}
+#elders-law{
+
+    background-image: url(img/case/elders-law.jpg);
+}
+#elders-law::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #acacac, #acacacb2, #acacac67);
+    /* background: rgba(184, 184, 74, 0.527); */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.8s;
+    z-index:1;
+}
+#elders-law:hover::before{
+    transform:scaleX(1);
+}
+#sandpiper-case{
+    
+    background-image: url(img/case/sandpiper.png);
+
+}
+#sandpiper-case::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #acacac, #acacacb2, #acacac67);
+    /* background: rgba(184, 184, 74, 0.527); */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+    z-index:1;
+}
+#sandpiper-case:hover::before{
+    transform:scaleX(1);
+}
+#Jorge-de-Guzman{
+    
+    background-image: url(img/case/JorgedeGuzman.jpg);
+
+}
+#Jorge-de-Guzman::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #acacac, #acacacb2, #acacac67);
+    /* background: rgba(184, 184, 74, 0.527); */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.8s;
+    z-index:1;
+}
+#Jorge-de-Guzman:hover::before{
+    transform:scaleX(1);
+}
+#cant-reco-the-real-one{
+    margin-bottom: 150px;
+    background-image: url(img/case/cant-reco-the-real-one.png);
+
+}
+#cant-reco-the-real-one::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #acacac, #acacacb2, #acacac67);
+    /* background: rgba(184, 184, 74, 0.527); */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+    transition-timing-function: ease-in-out;
+    z-index:1;
+}
+#cant-reco-the-real-one:hover::before{
+    transform:scaleX(1);
+}
+.case-container-right{
+    left: 10%;
+}
+.case-container-left{
+    right: 10%;
+}
+.case-count{
+    font-size: 14rem;
+    color: orange;
+    position: absolute;
+    z-index: 2;
+    /* transition: all;
+    transition-timing-function: ease-in;
+    transition-duration: 0.8s; */
+    filter: opacity(0);
+    transition: all;
+    transition-duration: 0.8s;
+}
+.odd-case-count{
+    top: -13%;
+    right: -5%;
+}
+.even-case-count{
+    top: -13%;
+    left: -5%;
+}
+.AllCases:hover .case-count{
+    filter: opacity(1) drop-shadow(0 0 15px orange);
+    font-size: 15.3rem;
+}
+.case-heading{
+    font-size: 3rem;
+    color: white;
+    transition: color;
+    transition-duration: 0.8s;
+    filter: drop-shadow(0 0 0.1px white);
+}
+.case-description{
+    color: white;
+    transition: all;
+    transition-duration: 0.8s;
+}
+.AllCases:hover .case-heading {
+    color: red;
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.356));
+}
+.AllCases:hover .case-description{
+    color: black;
+}
+.sub-div-for-cases{
+    position: absolute;
+    z-index: 2;
+    transition-property: all;
+    filter: opacity(0.7);
+    transition-duration: 0.8s;
+}
+.AllCases:hover .sub-div-for-cases{
+    transform: scale(1.05);
+    filter: opacity(1);
+}
+.sub-div-for-cases-right-alignment{
+    right: 6.5%;
+    padding-left: 8rem;
+    text-align: right;
+}
+.sub-div-for-cases-left-alignment{
+    left: 6.5%;
+    padding-right: 8rem;
+}
+
+.read-more-btn{
+    outline: none;
+    border: none;
+    border-radius: 0;
+    /* width: fit-content; */
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+.Read-More {
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 25px;
+  padding: 0 50px;
+  border: none;
+  border-right: 1px solid #ff6c27;
+  position: relative;
+  transition: color;
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
+}
+.Read-More:after , .Read-More:before{
+    content: "";
+    position: absolute;
+    top: 0;
+}
+.Read-More:before{
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: -1;
+}
+.Read-More:after{
+    right: -1px;
+    width: 1px;
+    height: 50px;
+    background-color: #ff6c27;
+    /* color: #ffffff; */
+    transform: rotate(-90deg) scale(1);
+    transform-origin: center;
+    z-index: 0;
+    transition: width 0.3s ease-in-out, transform 0.2s ease-in-out 0.3s, z-index 0.15s ease-in-out;
+}
   
+/* .Read-More:hover:before{
+    color: #ffffff;
+    transition: color 0.2s ease-in-out 0.25s;
+} */
+.Read-More:hover{
+    color: white;
+}
+.Read-More:hover:after{
+    z-index: -1;
+    transform: rotate(0deg) scale(1.03);
+    /* color: white; */
+    width: 80%;
+    transition: transform 0.2s ease-in-out, width 0.3s ease-in-out 0.2s;
+}
+.footer-for-cases-section{
+position: absolute;
+bottom: -0.55%;
+right: 1%;
+font-size: 6rem;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* #WhySaul{
+    margin-top: -150px;
+    color: white;
+} */

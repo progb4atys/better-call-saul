@@ -8,26 +8,27 @@
     <title>Better Call Saul</title>
 </head>
 <body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="img/logo-nobg.png" alt="bcs_logo" width="160px" height="90px">
+        </div>
+        <div class="bookmark">
+             <a href="#main-case-container-dummy"  class="drtlink">Cases</a>
+            <a href="#WhySaul"  class="drtlink">Why Saul?</a>
+            <a href="#CallSaul"  class="drtlink">Call Saul</a>
+        </div>
+    </header>
     <div class="wrapper">
         <div class="container">
-            <div class="navbar">
-                <div class="logo-container">
-                    <img src="img/logo.png" alt="bcs_logo" width="160px" height="90px">
-                </div>
-                <div class="bookmark">
-                     <a href="#Cases"  class="drtlink">Cases</a>
-                    <a href="#WhySaul"  class="drtlink">Why Saul?</a>
-                    <a href="#CallSaul"  class="drtlink">Call Saul</a>
-                </div>
-            </div>
             <div class="intro">
                 <div class="text-container">
                     <p class="greetings">Hi! I am Saul Goodman</p><br/> 
-                    <p class="javascript">I am </p><br/><br/>
-                    <p class="description">I'm attorney at law based out of Albuquerque, New Mexico. But don't worry, if you need legal representation in any state, I'm here for you. If you're in trouble with the law, just remember one thing: you have rights. That's why I fight for you. I believe that every man, woman and child deserves a fair trial, and I'm here to make sure that no matter what you've done, you get the representation you deserve. There are a lot of shady lawyers out there, but when you need legal help, I'm your guy.</p><br/><br/>
-                    <a href="tel:(505) 503-4455" target="_blank" class="HireMe">
+                    <div class="javascript"><span class="role"></span></div><br/><br/>
+                   <p class="description">I'm attorney at law based out of Albuquerque, New Mexico. But don't worry, if you need legal representation in any state, I'm here for you.  <!-- If you're in trouble with the law, just remember one thing: you have rights. That's why I fight for you. I believe that every man, woman and child deserves a fair trial, and I'm here to make sure that no matter what you've done, you get the representation you deserve. There are a lot of shady lawyers out there, but when you need legal help, I'm your guy.--></p><br/><br/> 
+                    <a href="tel:(505) 503-4455" target="_blank" class="HireMe" >
                         <div class="btn-pink">Call Saul!</div>
                     </a>
+                    
                 </div>
                 <section class="image-container-section">
                     <div class="saul-img">
@@ -46,8 +47,91 @@
                         <img src="img/JMM.png" alt="JMM" width="50px">
                     </div>
                 </section>
+                <div class="big-size-name unselectable" id="main-case-container-dummy">It's all Good man!</div><!--cases navigator navigates here cause we have a fixed navigator menu-->
+                <div class="side-text unselectable">Don't drink and drive but if you do Better Call Saul!</div>
             </div>
         </div>
-    </div>
+            <main class="cases-container">
+                <h1 class="cases-heading">Cases</h1>
+                <section class="only-cases-container">
+
+                    
+                    <div id="teens-in-trouble" class="AllCases case-container-left">
+                        <div class="unselectable case-count  odd-case-count">01</div>
+                        <div class="sub-div-for-cases sub-div-for-cases-left-alignment">
+                            <h2 class="case-heading">Defending the Unthinkable: Jimmy McGill's Unyielding Advocacy</h2><br/><br/>
+                            <p class="case-description">So, there were these three teenagers, caught up in a wild case that had jaws dropping. Breaking into a morgue and getting tangled up in some dark stuff – yep, that's what they were accused of. Jimmy McGill, that's me, stepped in, guns blazing. Now, I might not have pulled off a total miracle, but I sure gave it my all. Through the twists, turns, and some tough evidence, I managed to make the authorities see a glimmer of mercy. It's a reminder that I'm not just in it for the easy wins – I'm here to fight for justice, even when it's tough as nails.</p><br/>
+                            <div class="read-more-btn">
+                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="elders-law" class="AllCases case-container-right">
+                        <div class="unselectable case-count  even-case-count">02</div>
+                            <div class="sub-div-for-cases sub-div-for-cases-right-alignment">
+                                <h2 class="case-heading">Elder Law</h2><br/><br/>
+                            <p class="case-description">Your trusted legal guide, brings his expertise to elder law. With a heart as golden as retirement sunsets, he ensures your loved ones receive the care and respect they deserve in matters of wills, trusts, and long-term care. When it comes to elders, he's not just good, he's Goodman!</p><br/>
+                            <div class="read-more-btn">
+                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sandpiper-case" class="AllCases case-container-left">
+                        <div class="unselectable case-count  odd-case-count">03</div>
+                        <div class="sub-div-for-cases sub-div-for-cases-left-alignment">
+                            <h2 class="case-heading">Sandpiper Unveiled: Saul Goodman's Elder Justice Triumph</h2><br/><br/>
+                            <p class="case-description">The Sandpiper case was a rollercoaster ride through the twists and turns of elder exploitation. Yours truly, Saul Goodman, was like a legal superhero, swooping in to save the day. I dug deep, uncovered the truth, and fought tooth and nail to ensure justice for the elderly who were taken advantage of. From the courtroom showdowns to the behind-the-scenes maneuvers, this was one for the books - a victory that shines in my hall of fame.</p><br/>
+                            <div class="read-more-btn">
+                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Jorge-de-Guzman" class="AllCases case-container-right">
+                        <div class="unselectable case-count  even-case-count">04</div>
+                        <div class="sub-div-for-cases sub-div-for-cases-left-alignment">
+                            <h2 class="case-heading">Jorge De Guzman's Redemption: A Saul Goodman Legal Odyssey</h2><br/><br/>
+                            <p class="case-description"><s>Lalo</s> Jorge De Guzman case. I, Saul Goodman, took the reins and turned the tables, guiding Jorge through the legal labyrinth like a seasoned navigator. From courtroom battles to strategic moves, we transformed a seemingly dire situation into a tale of triumph. So, when you hear the name Jorge De Guzman, remember – behind the scenes, I was the maestro orchestrating justice.</p><br/>
+                            <div class="read-more-btn">
+                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cant-reco-the-real-one" class="AllCases case-container-left">
+                        <div class="unselectable case-count  odd-case-count">05</div>
+                        <div class="sub-div-for-cases sub-div-for-cases-left-alignment">
+                            <h2 class="case-heading">The Harkness Hustle: Goodman's Courtroom Mirage</h2><br/><br/>
+                            <p class="case-description">Alright, let me take you back to that moment in the courtroom. So there's this case, the Harkness case, where things were heating up. Mr. Harkness, adamant about identifying the wrong guy, seemed pretty confident. But guess what? I, Jimmy McGill, had a trick up my sleeve. With a little twist of words and some clever maneuvering, I unveiled the truth – the real defendant was sitting pretty in the audience. It was a twist that shook the whole courtroom, and in the end, I got that mistrial. Call it a legal hustle or a masterstroke, one thing's for sure: Jimmy McGill knows how to turn the tables when it counts.</p><br/>
+                            <div class="read-more-btn">
+                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <div class="footer-for-cases-section unselectable">Cases</div>
+            </main>
+        <!-- <div id="WhySaul">
+            <p>Dared of my dreaming i this morrow said prophet my followed, straight then oer this and. There chamber that more a still flung ominous take nevermore. One more with his it than unseen. Youhere my parting he just form token grew him, and did door bore nearly my a i, songs all raven its pallas into whose soul truly, name said horror floor many tapping at, metell spoken chamber bore peering nights reclining sorrow on. Thrilled sent no my this. Smiling at tis this so and, you sainted my nepenthe sign straight shore. My quoth god i as, no ever.</p>
+            <img src="img/Letter-J.png" alt="">
+            <img src="img/Letter-J.png" alt="">
+            <img src="img/Letter-J.png" alt="">
+        </div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script>
+      var typeData = new Typed(".role", {
+        strings: [
+          "Did you know that you have rights?",
+          "American constitution says you do and so do I.",
+          "Get the best legal representation from the best criminal lawyer in ABQ.",
+          "Better Call Saul!",
+        ],
+        loop: true,
+        typeSpeed: 40,
+        backSpeed: 20,
+        backDelay: 1000,
+      });
+    </script>
 </body>
 </html>
