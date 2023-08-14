@@ -605,7 +605,7 @@ body{
     height: 50px;
     background-color: #ff6c27;
     /* color: #ffffff; */
-    transform: rotate(-90deg) scale(1);
+    transform: rotate(-90deg);
     transform-origin: center;
     z-index: 0;
     transition: width 0.3s ease-in-out, transform 0.2s ease-in-out 0.3s, z-index 0.15s ease-in-out;
@@ -620,7 +620,7 @@ body{
 }
 .Read-More:hover:after{
     z-index: -1;
-    transform: rotate(0deg) scale(1.03);
+    transform: rotate(0deg);
     /* color: white; */
     width: 80%;
     transition: transform 0.2s ease-in-out, width 0.3s ease-in-out 0.2s;
@@ -644,3 +644,165 @@ font-size: 6rem;
     margin-top: -150px;
     color: white;
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1700px){
+    .navbar{
+        padding: 0 0;
+    }
+    .bookmark{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 1610px){
+    .only-cases-container {
+        gap: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .AllCases {
+        width: 70rem;
+        height: 38.153125rem;
+    }
+    .odd-case-count,
+    .even-case-count {
+        top: -11%;
+    }
+    .cases-heading {
+        font-size: 4.5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 1400px) {
+    .container {
+        width: 1200px;
+    }
+    .navbar {
+        padding: 0 0;
+        width: 100vw;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-between; */
+    }
+    .bookmark{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .logo-container{
+        margin-left: 0;
+        margin-right: 300px;
+    }
+    .intro {
+        margin-left: 20px;
+        margin-top: 10rem;
+    }
+    .text-container {
+        width: 55%;
+    }
+    .big-size-name {
+        font-size: 4.5rem;
+        left: 5%;
+    }
+    .side-text {
+        bottom: 0.2%;
+        font-size: 1.3rem;
+    }
+    .only-cases-container {
+        gap: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .AllCases {
+        width: 70rem;
+        height: 38.153125rem;
+    }
+    .odd-case-count,
+    .even-case-count {
+        top: -11%;
+    }
+    .cases-heading {
+        font-size: 4.5rem;
+    }
+    /* .case-heading {
+        font-size: 2.5rem;
+    }
+    .case-description {
+        font-size: 1.4rem;
+    } */
+    .sub-div-for-cases {
+        filter: opacity(0.9);
+    }
+    /* .read-more-btn {
+        margin-right: 15px;
+    }
+    .Read-More {
+        font-size: 1.3rem;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 30px;
+    } */
+    .footer-for-cases-section {
+        font-size: 4.5rem;
+    }
+}

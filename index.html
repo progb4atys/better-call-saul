@@ -62,7 +62,7 @@
                             <h2 class="case-heading">Defending the Unthinkable: Jimmy McGill's Unyielding Advocacy</h2><br/><br/>
                             <p class="case-description">So, there were these three teenagers, caught up in a wild case that had jaws dropping. Breaking into a morgue and getting tangled up in some dark stuff – yep, that's what they were accused of. Jimmy McGill, that's me, stepped in, guns blazing. Now, I might not have pulled off a total miracle, but I sure gave it my all. Through the twists, turns, and some tough evidence, I managed to make the authorities see a glimmer of mercy. It's a reminder that I'm not just in it for the easy wins – I'm here to fight for justice, even when it's tough as nails.</p><br/>
                             <div class="read-more-btn">
-                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                                <span class="btn-for-case Read-More" data-title="Click" onclick="playMusic()">Read more...</span>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                                 <h2 class="case-heading">Elder Law</h2><br/><br/>
                             <p class="case-description">Your trusted legal guide, brings his expertise to elder law. With a heart as golden as retirement sunsets, he ensures your loved ones receive the care and respect they deserve in matters of wills, trusts, and long-term care. When it comes to elders, he's not just good, he's Goodman!</p><br/>
                             <div class="read-more-btn">
-                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                                <span class="btn-for-case Read-More" data-title="Click" onclick="playMusic()">Read more...</span>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                             <h2 class="case-heading">Sandpiper Unveiled: Saul Goodman's Elder Justice Triumph</h2><br/><br/>
                             <p class="case-description">The Sandpiper case was a rollercoaster ride through the twists and turns of elder exploitation. Yours truly, Saul Goodman, was like a legal superhero, swooping in to save the day. I dug deep, uncovered the truth, and fought tooth and nail to ensure justice for the elderly who were taken advantage of. From the courtroom showdowns to the behind-the-scenes maneuvers, this was one for the books - a victory that shines in my hall of fame.</p><br/>
                             <div class="read-more-btn">
-                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                                <span class="btn-for-case Read-More" data-title="Click" onclick="playMusic()">Read more...</span>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                             <h2 class="case-heading">Jorge De Guzman's Redemption: A Saul Goodman Legal Odyssey</h2><br/><br/>
                             <p class="case-description"><s>Lalo</s> Jorge De Guzman case. I, Saul Goodman, took the reins and turned the tables, guiding Jorge through the legal labyrinth like a seasoned navigator. From courtroom battles to strategic moves, we transformed a seemingly dire situation into a tale of triumph. So, when you hear the name Jorge De Guzman, remember – behind the scenes, I was the maestro orchestrating justice.</p><br/>
                             <div class="read-more-btn">
-                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                                <span class="btn-for-case Read-More" data-title="Click" onclick="playMusic()">Read more...</span>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                             <h2 class="case-heading">The Harkness Hustle: Goodman's Courtroom Mirage</h2><br/><br/>
                             <p class="case-description">Alright, let me take you back to that moment in the courtroom. So there's this case, the Harkness case, where things were heating up. Mr. Harkness, adamant about identifying the wrong guy, seemed pretty confident. But guess what? I, Jimmy McGill, had a trick up my sleeve. With a little twist of words and some clever maneuvering, I unveiled the truth – the real defendant was sitting pretty in the audience. It was a twist that shook the whole courtroom, and in the end, I got that mistrial. Call it a legal hustle or a masterstroke, one thing's for sure: Jimmy McGill knows how to turn the tables when it counts.</p><br/>
                             <div class="read-more-btn">
-                                <span class="btn-for-case Read-More" data-title="Click">Read more...</span>
+                                <span class="btn-for-case Read-More" data-title="Click" onclick="playMusic()">Read more...</span>
                             </div>
                         </div>
                     </div>
@@ -132,6 +132,15 @@
         backSpeed: 20,
         backDelay: 1000,
       });
+    var music = new Audio('music/music.mp3');
+    var isPlaying = false;
+
+    function playMusic() {
+        if (!isPlaying) {
+            music.play();
+            isPlaying = true;
+        }
+    }
     </script>
 </body>
 </html>
