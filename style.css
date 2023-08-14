@@ -310,6 +310,7 @@ body{
     /* padding-bottom: 5rem; */
     /* margin-top: 198px; */
     position: relative;
+    width: 100vw;
 }
 .cases-heading{
     padding-top: 30px;
