@@ -846,6 +846,7 @@ font-size: 6rem;
       margin-left: 20px;
       margin-top: 0rem;
       width: 100vw;
+      overflow-y: hidden;
     }
     .text-container {
       width: 600px;
