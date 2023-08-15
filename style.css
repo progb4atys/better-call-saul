@@ -807,3 +807,83 @@ font-size: 6rem;
         font-size: 4.5rem;
     }
 }
+
+
+
+@media screen and (max-width: 1280px) {
+    .wrapper {
+      overflow-x: hidden;
+    }
+    .side-text {
+      opacity: 0;
+    }
+    .saul-image {
+      width: 250px;
+    }
+    .balance {
+      width: 100px;
+    }
+    .wrldgr8estlawyer {
+      width: 133.3333px;
+    }
+    .cube-image {
+      width: 33.3333px;
+    }
+    .letter-JMM {
+      width: 33.33333px;
+    }
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      padding: 5px;
+      padding-bottom: 0;
+      margin: 0 auto;
+    }
+    .navbar {
+      padding: 0 20px;
+    }
+    .intro {
+      margin-left: 20px;
+      margin-top: 0rem;
+      width: 100vw;
+    }
+    .text-container {
+      width: 600px;
+    }
+    .image-container-section {
+      margin-top: 10rem;
+      margin-right: 4rem;
+    }
+    .cases-container {
+      width: 100%;
+      margin-top: 0;
+      padding: 0 2rem;
+      /* height: 300vh; */
+    }
+    .AllCases {
+      width: 100%;
+      /* height: fit-content; */
+    }
+    .case-count {
+      font-size: 10rem;
+    }
+    .cases-heading{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .case-heading {
+      font-size: 2.5rem;
+    }
+    /* .Read-More {
+      font-size: 1.2rem;
+      padding: 0 20px;
+      height: 40px;
+      line-height: 40px;
+    } */
+    .side-text {
+      font-size: 1rem;
+    }
+    .footer-for-cases-section {
+      font-size: 2rem;
+    }
+  }
