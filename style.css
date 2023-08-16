@@ -623,7 +623,7 @@ body{
     z-index: -1;
     transform: rotate(0deg);
     /* color: white; */
-    width: 100%;
+    width: 101%;
     transition: transform 0.2s ease-in-out, width 0.3s ease-in-out 0.2s;
 }
 .footer-for-cases-section{
@@ -632,7 +632,7 @@ bottom: -0.55%;
 right: 1%;
 font-size: 6rem;
 }
-.unselectable {
+.wrapper{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -641,51 +641,316 @@ font-size: 6rem;
     user-select: none;
 }
 
-/* #WhySaul{
+#WhySaul {
     margin-top: -150px;
     color: white;
-} */
+    text-align: center;
+    width: 100vw;
+    margin-bottom: 100px;
+}
+
+.heading-of-why-saul {
+    color: red;
+    font-size: 5rem;
+    padding: 3rem 0;
+    filter: drop-shadow(0px 0px 10px red);
+}
+
+.Why-saul-sub-div {
+    display: flex;
+    gap: 100px;
+}
+
+.text-content-for-why-saul {
+    width: 60%;
+    padding: 0 3rem;
+    position: relative;
+    text-align: left;
+    background-image: url('img/logo-nobg-blurres.png');
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: center center;
+    /* overflow: hidden; Ensure the blurred background doesn't extend outside */
+}
+
+.text-content-for-why-saul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('img/logo-nobg-blurres.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(100px) opacity(0.5); /* Apply the blur effect */
+    background-color: rgb(0, 0, 0);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+.advertising-video-container{
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 3; */
+    position: relative;
+    padding-left: 6rem;
+}
+.advertising-video{
+    z-index: 2;
+    position: absolute;
+    right: 20%;
+}
+.shapes{
+    position: absolute;
+    z-index: 0;
+}
+#video-player::-webkit-media-controls {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+#video-player::-webkit-media-controls-play-button {
+    color: #ff0080;
+    background-color: transparent;
+}
+
+#video-player::-webkit-media-controls-time-remaining-display,
+#video-player::-webkit-media-controls-current-time-display {
+    color: #fff;
+}
+.big-shape-container{
+    top: 1%;
+    right: 28%;
+    filter: blur(12px) drop-shadow(0px 0px 10px yellow);
+
+    animation: video-background 10s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes video-background{
+    0%{
+        transform: scale(1);
+        filter: blur(12px);
+    }
+    50%{
+        transform: scale(1);
+        filter: blur(50px);
+    }
+    100%{
+        transform: scale(1);
+        filter: blur(12px);
+    }
+}
+
+.fan-shape-container{
+    top: 0%;
+    right: 6%;
+    /* z-index: 3; */
+
+    filter: blur(30px) opacity(0.6);
+    animation: fan-on-video 8s steps(100000) infinite;
+    /* animation-duration: 8s; */
+    animation-timing-function: linear;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes fan-on-video{
+    100%{
+        transform: rotateZ(1440deg);
+    }
+}
+
+img{
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
+.circle-shape-container{
+    bottom: 6%;
+    filter: blur(18px) opacity(0.8);
+
+    animation: reflect 15s ease-in-out infinite;
+    /* z-index: 4; */
+}
 
 
 
 
+@keyframes reflect {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
 
+    50% {
+        transform: translateX(-360%) translateY(-150%) scale(1.3);
+        filter: blur(40px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+}
 
+.contact-saul{
+    width: 100vw;
+    height: 70vh;
+    background-color: rgb(75, 75, 75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.contact-saul-heading{
+    color: rgb(255, 238, 0);
+    font-size: 4rem;
+    position: absolute;
+    top: 10%;
+}
+.contact-form{
+    position: absolute;
+    top: 27.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.4rem;
+}
+.input-field{
+    width: 40vw;
+    font-size: 1.5rem;
+    /* text-align: center; */
+    height: 2.2rem;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+.input-field::-moz-focus-inner{
+    filter: drop-shadow(0 0 10px black);
+}
 
+.last-button-container{
+    display: flex;
+    justify-content: center;
+}
 
+.btn-one {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    padding: 1rem;
+    width: fit-content;
+    
+  }
+  .btn-one span {
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    /* width: 40vh; */
+  }
+  .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    background-color: rgba(255, 255, 0, 0.103);
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  .btn-one:hover span {
+    letter-spacing: 4px;
+    cursor: pointer;
+  }
+  .btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  .btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+  
+.icon--github a {
+    background-color: #4078c0;
+    background-image: url('https://benhodgson.net/img/social/github.svg');
+}
 
+/* Add this to your existing CSS file or style block */
+.footer-credit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    color: #FFF;
+    gap: 1rem;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,0.7021009087228641) 0%, rgba(0,0,0,1) 49%, rgba(243,255,0,0.7021009087228641) 100%); 
+}
 
+.github-link {
+    display: inline-block;
+    position: relative;
+    perspective: 1000px;
+}
 
+.github-icon {
+    width: 80px;
+    height: 80px;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
 
+.github-icon img {
+    width: 100%;
+    height: auto;
+}
 
+.github-link:hover .github-icon {
+    transform: rotateY(360deg) rotate(360deg);
+}
 
+.github-icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    transform: rotateY(180deg) rotate(360deg);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.github-link:hover .github-icon::before {
+    transform: rotateY(0deg) rotate(0deg);
+}
 
 
 
@@ -710,6 +975,7 @@ font-size: 6rem;
         display: flex;
         justify-content: space-evenly;
     }
+
 }
 
 @media screen and (max-width: 1610px){
@@ -785,12 +1051,12 @@ font-size: 6rem;
     .cases-heading {
         font-size: 4.5rem;
     }
-    /* .case-heading {
-        font-size: 2.5rem;
+    .case-heading {
+        font-size: 2rem;
     }
     .case-description {
-        font-size: 1.4rem;
-    } */
+        font-size: 0.9rem;
+    }
     .sub-div-for-cases {
         filter: opacity(0.9);
     }
@@ -807,7 +1073,6 @@ font-size: 6rem;
         font-size: 4.5rem;
     }
 }
-
 
 
 @media screen and (max-width: 1280px) {
@@ -846,7 +1111,6 @@ font-size: 6rem;
       margin-left: 20px;
       margin-top: 0rem;
       width: 100vw;
-      overflow-y: hidden;
     }
     .text-container {
       width: 600px;
@@ -888,3 +1152,4 @@ font-size: 6rem;
       font-size: 2rem;
     }
   }
+  

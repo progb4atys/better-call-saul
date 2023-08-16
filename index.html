@@ -110,7 +110,7 @@
                 </section>
                 <div class="footer-for-cases-section unselectable">Cases</div>
             </main>
-        <!-- <div id="WhySaul">
+        <div id="WhySaul">
             <h2 class="heading-of-why-saul">Why Saul?</h2>
             <div class="Why-saul-sub-div">
                 <section class="text-content-for-why-saul">
@@ -132,16 +132,41 @@
                         </p>
                     </div>
                 </section>
-                <section class="advertising-video">
+                <section class="advertising-video-container">
+                    <div class="fan-shape-container shapes unselectable-img"><img src="img/video-background-rotate.png" alt="" width="200px"></div>
                     <div class="shapes-container">
-                        <div class="big-shape-container"><img src="img/video-background-big.png" alt="" class="big-shape"></div>
-                        <div class="fan-shape-container"><img src="img/video-background-rotate.png" alt=""></div>
-                        <div class="circle-shape-container"><img src="img/video-background-circle.png" alt=""></div>
+                        <div class="big-shape-container shapes unselectable-img"><img src="img/video-background-big.png" alt="" class="big-shape" width="600px"></div>
+                        <div class="circle-shape-container shapes unselectable-img"><img src="img/video-background-circle.png" alt="" width="150px"></div>
                     </div>
-                    <video src="video/bettercallsaul hd commercial.mp4" controls width="600px"></video>
+                    <div class="advertising-video">
+                    <video src="video/bettercallsaul hd commercial.mp4" controls width="600px" id="video-player"></video>
+                    </div>
                 </section>
             </div>
-        </div> -->
+        </div>
+        <div class="contact-saul">
+            <h2 class="contact-saul-heading">Contact Goodman</h2><br/><br/>
+            <div class="contact-form">
+                <input type="text" placeholder="What Do I Call You, Partner?" required class="input-field">
+                <input type="email" placeholder="Let's Get Digital: Your Email, Please!" required class="input-field">
+                <input type="tel" placeholder="Stay in Touch: Your Number, Please!" class="input-field">
+                <input type="text" id="Message-for-saul" class="input-field" placeholder="Lay It on Me: Saul Goodman's Ready to Listen"></input><br/><br/><br/><br/>
+                <div class="last-button-container">
+                    <div class="btn-one" onclick="playMusic2()">
+                        <span>Shoot me a message!</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer-credit">
+            <span> &copy; 2023 Progb4Pawgs(Axel) All Right Reserved</span>
+            <a href="https://github.com/Progb4Pawgs" target="_blank" class="github-link">
+                <div class="github-icon">
+                    <img src="icon/icons8-github.svg" alt="GitHub Profile">
+                </div>
+            </a>
+            </footer>
     </div>
 
 
@@ -174,6 +199,15 @@
         if (!isPlaying) {
             music.play();
             isPlaying = true;
+        }
+    }
+    var music2 = new Audio('music/music1.mp3')
+    var isPlaying2 = false;
+
+    function playMusic2(){
+        if (!isPlaying2) {
+            music2.play()
+            isPlaying2=true;
         }
     }
     </script>
