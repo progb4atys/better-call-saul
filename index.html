@@ -149,7 +149,7 @@
             <div class="contact-form">
                 <input type="text" placeholder="What Do I Call You, Partner?" required class="input-field">
                 <input type="email" placeholder="Let's Get Digital: Your Email, Please!" required class="input-field">
-                <input type="tel" placeholder="Stay in Touch: Your Number, Please!" class="input-field">
+                <input type="tel" placeholder="Stay in Touch: Your Number, Please!" class="input-field" pattern="[0-9+-]*" id="myTelInput">
                 <input type="text" id="Message-for-saul" class="input-field" placeholder="Lay It on Me: Saul Goodman's Ready to Listen"></input><br/><br/><br/><br/>
                 <div class="last-button-container">
                     <div class="btn-one" onclick="playMusic2()">
@@ -210,6 +210,11 @@
             isPlaying2=true;
         }
     }
+    document.getElementById('myTelInput').addEventListener('input', function(event) {
+        const inputValue = event.target.value;
+        const filteredValue = inputValue.replace(/[^0-9+-]/g, ''); // Remove non-digit characters
+        event.target.value = filteredValue;
+    });
     </script>
 </body>
 </html>
