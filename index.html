@@ -169,7 +169,9 @@
             </footer>
     </div>
 
-
+    <div id="message" class="message">
+        <p>This site is best viewed on a laptop or larger screen. Please switch to a larger screen for the best experience.</p>
+    </div>
 
 
 
@@ -192,6 +194,7 @@
         backSpeed: 20,
         backDelay: 1000,
       });
+        //music ke liye: 1 hi baar music play ho
     var music = new Audio('music/music.mp3');
     var isPlaying = false;
 
@@ -210,11 +213,16 @@
             isPlaying2=true;
         }
     }
+        //telfone sec mein keval numbers hi aaye
     document.getElementById('myTelInput').addEventListener('input', function(event) {
         const inputValue = event.target.value;
-        const filteredValue = inputValue.replace(/[^0-9+-]/g, ''); // Remove non-digit characters
+        const filteredValue = inputValue.replace(/[^0-9+-]/g, ''); 
         event.target.value = filteredValue;
     });
+
+
+
+
     </script>
 </body>
 </html>
