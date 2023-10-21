@@ -694,6 +694,8 @@ font-size: 6rem;
     width:40%;
     display: flex;
     justify-content: center;
+    /* margin: auto; */
+    padding: auto;
     align-items: center;
     /* z-index: 3; */
     position: relative;
@@ -703,6 +705,9 @@ font-size: 6rem;
     z-index: 2;
     position: absolute;
     right: 20%;
+    margin: auto;
+    padding: auto;
+    
 }
 .shapes{
     position: absolute;
@@ -903,7 +908,7 @@ img{
     background-image: url('https://benhodgson.net/img/social/github.svg');
 }
 
-/* Add this to your existing CSS file or style block */
+
 .footer-credit {
     display: flex;
     flex-direction: column;
@@ -1004,6 +1009,33 @@ img{
     .container {
         width: 1200px;
     }
+    .Why-saul-sub-div {
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        gap: 20%;
+    }
+
+    .text-content-for-why-saul {
+        width: 80%;
+        background-image: none;
+        text-align: center;
+    }
+    .circle-shape-container{
+        display: none;
+    }
+
+    .advertising-video-container {
+        width: 80%;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+    .advertising-video{
+        float: right;
+    }
+
     .navbar {
         padding: 0 0;
         width: 100vw;
@@ -1072,84 +1104,53 @@ img{
     .footer-for-cases-section {
         font-size: 4.5rem;
     }
+
+
+
+
+
+
+
+/*mobile wale kripa kr ek laptop kharide*/
+#warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: red; 
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding: 50px;
+    z-index: 999;
 }
 
+/* media query mobile walo ke liye */
+@media (max-width: 1280px) {
+    #warning {
+        display: block;
+        background-color: red;
+    }
 
-@media screen and (max-width: 1280px) {
-    .wrapper {
-      overflow-x: hidden;
+    /* hide other elements when showing the warning */
+    body {
+        overflow: hidden;
     }
-    .side-text {
-      opacity: 0;
+
+    header, .wrapper, .navbar, .cases-container, #WhySaul, .contact-saul, .footer-credit {
+        display: none;
+        ;
     }
-    .saul-image {
-      width: 250px;
+    .message {
+        position: fixed;
+        top: 50%;
+        /* background-color: red; */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 24px;
+        color: white;
     }
-    .balance {
-      width: 100px;
-    }
-    .wrldgr8estlawyer {
-      width: 133.3333px;
-    }
-    .cube-image {
-      width: 33.3333px;
-    }
-    .letter-JMM {
-      width: 33.33333px;
-    }
-    .container {
-      width: 100%;
-      max-width: 1280px;
-      padding: 5px;
-      padding-bottom: 0;
-      margin: 0 auto;
-    }
-    .navbar {
-      padding: 0 20px;
-    }
-    .intro {
-      margin-left: 20px;
-      margin-top: 0rem;
-      width: 100vw;
-    }
-    .text-container {
-      width: 600px;
-    }
-    .image-container-section {
-      margin-top: 10rem;
-      margin-right: 4rem;
-    }
-    .cases-container {
-      width: 100%;
-      margin-top: 0;
-      padding: 0 2rem;
-      /* height: 300vh; */
-    }
-    .AllCases {
-      width: 100%;
-      /* height: fit-content; */
-    }
-    .case-count {
-      font-size: 10rem;
-    }
-    .cases-heading{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .case-heading {
-      font-size: 2.5rem;
-    }
-    /* .Read-More {
-      font-size: 1.2rem;
-      padding: 0 20px;
-      height: 40px;
-      line-height: 40px;
-    } */
-    .side-text {
-      font-size: 1rem;
-    }
-    .footer-for-cases-section {
-      font-size: 2rem;
-    }
-  }
-  
+}
